@@ -49,3 +49,10 @@ Open the script UdpHost.cs and edit the two variables \_hostIp and \_clientIp.
 Once the project is started and connected to Photon Fusion, it should try to connect to the exo-skeleton.
 
 # Interface
+![Pasted image 20220114114804.png]
+The image above show the first menu the user is met with, when starting the application. This is the default menu, that comes with a basic setup for Photon Fusion.
+
+The only buttons to know to succesfully run this project is "Start Host (H)" and "Start Client (C)".
+
+"Start Host (H)" will connect to the Fusion cloud as a host. This will enable the user access to all the menus that has been implemented in this project. "Start Client (C)" will connect to the Fusion cloud as a client, this will only be succesful if another user has connected as a host.
+
