@@ -49,7 +49,7 @@ Open the script UdpHost.cs and edit the two variables \_hostIp and \_clientIp.
 Once the project is started and connected to Photon Fusion, it should try to connect to the exo-skeleton.
 
 # Interface
-![Pasted image 20220114114804.png]
+![Fusion Menu](https://github.com/Hoppe2808/BodySwapUnity/blob/main/Pasted%20image%2020220114114804.png?raw=true)
 The image above show the first menu the user is met with, when starting the application. This is the default menu, that comes with a basic setup for Photon Fusion.
 
 The only buttons to know to succesfully run this project is "Start Host (H)" and "Start Client (C)".
