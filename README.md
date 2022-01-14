@@ -1,4 +1,4 @@
-This is the repository for the Unity implementation of the Body Swap project created by Sebastian Hoppe and Dumitru INSERT NAME.
+This is the repository for the Unity implementation of the Body Swap project created by Sebastian Hoppe and Dumitru Racicovschii.
 
 The repository and readme for the Raspberry Pi implementation is located at https://github.com/MrDm1try/BodySwapRaspberry.
 
@@ -21,6 +21,19 @@ Select Unity 2020.x.x to use as the Unity Version.
 
 The project can now be opened in Unity.
 
+## Connecting to Photon Fusion
+In order to use the networking functionality of Photon Fusion, you need to create an account on the website https://id.photonengine.com/en-US/Account/SignUp. It's free and allows for up to 20 concurrent users on the server at the same time. Any more and a paid plan will be needed.
+
+On the dashboard, create a new App. The Photon Type should be "Photon Fusion". The rest of the options are arbitrary.
+
+On the dashboard, copy the App-Id of the newly created App.
+
+In Unity, navigate to: Assets->Photon->Resources->PhotonAppSettings.
+
+Here replace the App Id Fusion with the id of the App created in the dashboard.
+
+The Unity project should now be connected to the Photon cloud service.
+
 ## Connecting to the exo-skeleton
 In order to use the Unity project with the exo-skeleton arm, they need to be connected to the same network.
 
@@ -33,8 +46,6 @@ Open the script UdpHost.cs and edit the two variables \_hostIp and \_clientIp.
 \_hostIp should be the IP adress of the Unity device.  
 \_clientIp should be the IP adress of the Raspberry Pi.
 
-
-
-## Connecting to Photon Fusion
+Once the project is started and connected to Photon Fusion, it should try to connect to the exo-skeleton.
 
 # Interface
