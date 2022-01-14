@@ -26,11 +26,11 @@ In order to use the Unity project with the exo-skeleton arm, they need to be con
 
 **Important**: For instructions on how to setup the connection for the exo-skeleton, look at the github repository for that implementation [Link](https://github.com/MrDm1try/BodySwapRaspberry).
 
-Locate the local IP adress of the device running the Unity project.\\
+Locate the local IP adress of the device running the Unity project.  
 Locate the local IP adress of the Raspberry Pi on the exo-skeleton.
 
-Open the script UdpHost.cs and edit the two variables \_hostIp and \_clientIp.\\
-\_hostIp should be the IP adress of the Unity device.\\
+Open the script UdpHost.cs and edit the two variables \_hostIp and \_clientIp.  
+\_hostIp should be the IP adress of the Unity device.  
 \_clientIp should be the IP adress of the Raspberry Pi.
 
 
