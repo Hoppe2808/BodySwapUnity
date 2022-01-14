@@ -32,6 +32,10 @@ public class RecordController : MonoBehaviour
     public void Start()
     {
         string path = Application.persistentDataPath+ "/Recordings/";
+        if(!Directory.Exists(path))
+        {
+            Directory.CreateDirectory(path);
+        }
 
         DirectoryInfo d = new DirectoryInfo(path);
         Debug.Log(d);
