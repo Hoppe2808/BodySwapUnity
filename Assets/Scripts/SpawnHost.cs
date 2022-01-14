@@ -27,7 +27,7 @@ public class SpawnHost : NetworkBehaviour
     public void Spawn()
     {
         //if (Runner.IsServer)
-        PlayerController detectPlayer = FindObjectOfType<PlayerController>();
+        PlayerNetworkController detectPlayer = FindObjectOfType<PlayerNetworkController>();
         if (Runner != null && detectPlayer == null && !spawned)
         {
             hostPlayer = Runner.Spawn(player, Vector3.zero, Quaternion.identity, Runner.LocalPlayer, onBeforeSpawned: null);

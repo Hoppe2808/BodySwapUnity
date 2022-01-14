@@ -11,6 +11,10 @@ public class UIController : MonoBehaviour
     [SerializeField] private GameObject controlPanel;
     [SerializeField] private GameObject hostButton;
     [SerializeField] private GameObject alertPanel;
+    [SerializeField] private GameObject recordPanel;
+    [SerializeField] private GameObject replayPanel;
+    [SerializeField] private GameObject savePanel;
+    [SerializeField] private GameObject simulatePanel;
     [SerializeField] private Button borderEnableButton;
     [SerializeField] private string enabledColor = "#266C28";
     [SerializeField] private string disabledColor = "#6C2727";
@@ -19,8 +23,14 @@ public class UIController : MonoBehaviour
     [SerializeField] private Button startBorderSequenceButton;
     [SerializeField] private Button releaseButton;
     [SerializeField] private Button alertButton;
+    [SerializeField] private Button recordButton;
+    [SerializeField] private Button simulateButton;
+    [SerializeField] private TMP_InputField saveInput;
+    [SerializeField] private TMP_Dropdown recordDropdown;
+    [SerializeField] private GameObject simulator;
 
     private PlayerNetworkController playerNetworkController;
+    private RecordController recordController;
     private bool isSet = false;
     private bool bordersEnabled;
     private bool alertEnabled = false;
@@ -37,6 +47,7 @@ public class UIController : MonoBehaviour
     void Start() {
         alertImage = alertPanel.GetComponent<Image>();
         PlayerNetworkController.OnBorderCrossed += ShowAlert;
+        RecordController.OnSaveRecord += UpdateReplayDropdown;
     }
 
     void Update()
@@ -92,6 +103,98 @@ public class UIController : MonoBehaviour
         gamePanel.SetActive(false);
         borderPanel.SetActive(true);
         hostButton.SetActive(true);
+    }
+
+    public void StartRecord()
+    {
+        SetPlayer();
+        gamePanel.SetActive(false);
+        recordPanel.SetActive(true);
+        replayPanel.SetActive(true);
+    }
+
+    public void ToggleRecording()
+    {
+        SetRecordingController();
+        if (!recordController.IsRecording())
+        {
+            BeginRecord();
+        }
+        else
+        {
+            EndRecord();
+        }
+    }
+
+    private void BeginRecord()
+    {
+        replayPanel.SetActive(false);
+        simulatePanel.SetActive(true);
+        SetButtonColor(recordButton, disabledColor);
+        recordButton.GetComponentInChildren<TextMeshProUGUI>().SetText("End Recording");
+        recordController.ToggleRecording();
+    }
+
+    private void EndRecord()
+    {
+        recordController.ToggleRecording();
+        recordPanel.SetActive(false);
+        simulatePanel.SetActive(false);
+        SetButtonColor(recordButton, enabledColor);
+        recordButton.GetComponentInChildren<TextMeshProUGUI>().SetText("Record");
+        savePanel.SetActive(true);
+    }
+
+    public void SaveRecording()
+    {
+        recordController.SaveRecording(saveInput.text);
+        savePanel.SetActive(false);
+        replayPanel.SetActive(true);
+        recordPanel.SetActive(true);
+    }
+
+    public void RepeatRecording()
+    {
+        string selectedRecording = recordDropdown.options[recordDropdown.value].text;
+
+        recordController.ReplayRecording(selectedRecording);
+    }
+
+    public void DeleteRecording()
+    {
+        string selectedRecording = recordDropdown.options[recordDropdown.value].text;
+
+        recordController.DeleteRecording(selectedRecording);
+    }
+
+    public void CancelSave()
+    {
+        savePanel.SetActive(false);
+        replayPanel.SetActive(true);
+        recordPanel.SetActive(true);
+    }
+
+    public void ToggleSimulator()
+    {
+        simulator.SetActive(!simulator.activeSelf);
+
+        string col = simulator.activeSelf ? disabledColor : enabledColor;
+        string text = simulator.activeSelf ? "Stop Simulator" : "Start Simulator";
+        SetButtonColor(simulateButton, col);
+        simulateButton.GetComponentInChildren<TextMeshProUGUI>().SetText(text);
+    }
+
+    private void UpdateReplayDropdown()
+    {
+        SetRecordingController();
+        List<TMP_Dropdown.OptionData> options = new List<TMP_Dropdown.OptionData>();
+        List<string> recordings = recordController.GetRecordings();
+        foreach (string recording in recordings)
+        {
+            TMP_Dropdown.OptionData option = new TMP_Dropdown.OptionData(recording);
+            options.Add(option);
+        }
+        recordDropdown.options = options;
     }
 
     public void SetLowerBorder()
@@ -289,6 +392,14 @@ public class UIController : MonoBehaviour
         if (playerNetworkController == null)
         {
             playerNetworkController = FindObjectOfType<PlayerNetworkController>();
+        }
+    }
+    
+    private void SetRecordingController()
+    {
+        if (recordController == null)
+        {
+            recordController = FindObjectOfType<RecordController>();
         }
     }
 }

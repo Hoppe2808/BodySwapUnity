@@ -11,10 +11,6 @@ public class PlayerNetworkController : NetworkBehaviour
 {
     public UdpHost udpHost;
     public ElbowPositioner elbow;
-    private PlayerController playerController;
-    private ClientController client;
-    private NetworkObject network;
-    private bool borderCrossed;
 
     public static event Action<float> OnBorderCrossed;
 
@@ -28,6 +24,11 @@ public class PlayerNetworkController : NetworkBehaviour
     [Networked(OnChanged = nameof(SendReleaseMessage))] public NetworkBool ReleaseControl { get; set; }
     [Networked(OnChanged = nameof(StartedBorders))] public NetworkBool BorderExperiment { get; set; }
 
+    private PlayerController playerController;
+    private ClientController client;
+    private NetworkObject network;
+    private bool borderCrossed;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -35,9 +36,12 @@ public class PlayerNetworkController : NetworkBehaviour
         playerController = FindObjectOfType<PlayerController>();
         elbow = playerController.GetElbowPositioner();
         UdpHost.OnReceiveMsg += OnMotorValue;
+        RecordController.OnResendMsg += OnMotorValue;
         HostUnchanged = true;
         network = GetComponent<NetworkObject>();
         client = FindObjectOfType<ClientController>();
+        //Only for testing
+        Simulator.OnDoSimulation += OnMotorValue;
     }
 
     // Update is called once per frame
