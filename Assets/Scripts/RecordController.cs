@@ -77,6 +77,7 @@ public class RecordController : MonoBehaviour
     {
         recordings.Remove(name);
         DeleteFile(name);
+        OnSaveRecord?.Invoke();
     }
 
     public static void SaveToFile(string name, SerializableList<string> recording)
