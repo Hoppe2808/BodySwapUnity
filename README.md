@@ -110,5 +110,5 @@ A small simulator has been developed for this part of the project. The simulator
 ![SaveMenu](https://github.com/Hoppe2808/BodySwapUnity/blob/main/Pasted%20image%2020220114131427.png?raw=true)  
 The image above show the menu that appears when a user ends a recording. It has an input field where the user should input the desired name of the recording.
 
-**Save**: Saves the recording with the name put into the input field.
+**Save**: Saves the recording with the name put into the input field.  
 **Cancel**: Cancels the recording. Returns the user to the recording menu and discards the recording.
