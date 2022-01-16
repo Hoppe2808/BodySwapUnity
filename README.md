@@ -97,5 +97,18 @@ The menu for the Border experiment is very similar to that of the Mirror experim
 
 ## Record Sequence
 ![RecordMenu](https://github.com/Hoppe2808/BodySwapUnity/blob/main/Pasted%20image%2020220114131112.png?raw=true)  
+The image above show the menu that appears when "Record Sequence" is chosen in the main menu. The white box is a dropdown menu consisting of the recordings saved on the local machine.  
+The buttons are explained below:
+
+**Record**: Begins a new recording of the movements of the arm. Another click of the button ends the recording.  
+**Replay**: Replay the recording selected in the dropdown above.  
+**Delete**: Delete the recording selected in the dropdown above from local storage.  
+
 ![Simulator](https://github.com/Hoppe2808/BodySwapUnity/blob/main/Pasted%20image%2020220114131356.png?raw=true)  
+A small simulator has been developed for this part of the project. The simulator does a bunch of random movements of the arm to artificially move it, without using an exoskeleton. This makes it possible to test the functionality without having a physical exoskeleton arm in possession.
+
 ![SaveMenu](https://github.com/Hoppe2808/BodySwapUnity/blob/main/Pasted%20image%2020220114131427.png?raw=true)  
+The image above show the menu that appears when a user ends a recording. It has an input field where the user should input the desired name of the recording.
+
+**Save**: Saves the recording with the name put into the input field.
+**Cancel**: Cancels the recording. Returns the user to the recording menu and discards the recording.
