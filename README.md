@@ -49,7 +49,7 @@ Open the script UdpHost.cs and edit the two variables \_hostIp and \_clientIp.
 Once the project is started and connected to Photon Fusion, it should try to connect to the exo-skeleton.
 
 # Interface
-![FusionMenu](https://github.com/Hoppe2808/BodySwapUnity/blob/main/Pasted%20image%2020220114114804.png?raw=true)
+![FusionMenu](https://github.com/Hoppe2808/BodySwapUnity/blob/main/Pasted%20image%2020220114114804.png?raw=true)  
 The image above show the first menu the user is met with when starting the application. This is the default menu that comes with a basic setup for Photon Fusion.
 
 The only buttons to know to succesfully run this project is "Start Host (H)" and "Start Client (C)".
@@ -60,7 +60,7 @@ All the functionality implemented in this project is designed with the idea that
 
 ## Main menu
 
-![ExperimentsMenu](https://github.com/Hoppe2808/BodySwapUnity/blob/main/Pasted%20image%2020220114124853.png?raw=true)
+![ExperimentsMenu](https://github.com/Hoppe2808/BodySwapUnity/blob/main/Pasted%20image%2020220114124853.png?raw=true)  
 When starting as a host, the menu shown above appears. This is the main menu of the application, where a user can navigate to the different functionality.
 
 **Mirror**: Navigates to the menus needed for conducting the Mirror experiment.  
@@ -69,7 +69,7 @@ When starting as a host, the menu shown above appears. This is the main menu of 
 
 All of the buttons described above disables the menu, which means the application needs to be restarted in order to select another option.
 
-![ReleaseControl](https://github.com/Hoppe2808/BodySwapUnity/blob/main/Pasted%20image%2020220114130015.png?raw=true)
+![ReleaseControl](https://github.com/Hoppe2808/BodySwapUnity/blob/main/Pasted%20image%2020220114130015.png?raw=true)  
 This button, found in the upper left corner of the screen, releases the control the exo-skeletons have of each other. This means that the master exo-skeleton will no longer be able to control the follower exo-skeleton. A second click of the button reactivates the control.
 
 ## Mirror
@@ -85,7 +85,7 @@ The modes only functionality is logging. Clicking either of the buttons **Baseli
 Read more about logging on the repository for the Raspberry Pi implementation [Link](https://github.com/MrDm1try/BodySwapRaspberry).
 
 ## Border
-![BorderMenu](https://github.com/Hoppe2808/BodySwapUnity/blob/main/Pasted%20image%2020220114130211.png?raw=true)
+![BorderMenu](https://github.com/Hoppe2808/BodySwapUnity/blob/main/Pasted%20image%2020220114130211.png?raw=true)  
 The menu for the Border experiment is very similar to that of the Mirror experiment. **Switch Host** is the same as in Mirror.
 
 ### Set Bounds
@@ -96,6 +96,6 @@ The menu for the Border experiment is very similar to that of the Mirror experim
 **Start Sequence**: Like with Mirror, this button is only used for logging, and sends a message to the exo-skeleton to navigate the logs.
 
 ## Record Sequence
-![RecordMenu](https://github.com/Hoppe2808/BodySwapUnity/blob/main/Pasted%20image%2020220114131112.png?raw=true)
-![Simulator](https://github.com/Hoppe2808/BodySwapUnity/blob/main/Pasted%20image%2020220114131356.png?raw=true)
-![SaveMenu](https://github.com/Hoppe2808/BodySwapUnity/blob/main/Pasted%20image%2020220114131427.png?raw=true)
+![RecordMenu](https://github.com/Hoppe2808/BodySwapUnity/blob/main/Pasted%20image%2020220114131112.png?raw=true)  
+![Simulator](https://github.com/Hoppe2808/BodySwapUnity/blob/main/Pasted%20image%2020220114131356.png?raw=true)  
+![SaveMenu](https://github.com/Hoppe2808/BodySwapUnity/blob/main/Pasted%20image%2020220114131427.png?raw=true)  
