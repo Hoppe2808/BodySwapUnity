@@ -3,7 +3,7 @@ This is the repository for the Unity implementation of the Body Swap project cre
 The repository and readme for the Raspberry Pi implementation is located at https://github.com/MrDm1try/BodySwapRaspberry.
 
 # Setup
-This readme assumes that the user already has access to a fully built exo-skeleton.
+This readme assumes that the user already has access to a fully built exo-skeleton, however, it is possible to do the setup and navigate the menus of Unity without any exoskeletons.
 
 The setup instructions is tested to work on both Windows and Linux. IOS is untested.
 
@@ -89,10 +89,10 @@ Read more about logging on the repository for the Raspberry Pi implementation [L
 The menu for the Border experiment is very similar to that of the Mirror experiment. **Switch Host** is the same as in Mirror.
 
 ### Set Bounds
-**Upper**: Stores the current rotation of the motors of the elbow joint of the hosts exo-skeleton as the upper boundary.
-**Lower**: Stores the current rotation of the motors of the elbow joint of the hosts exo-skeleton as the lower boundary.
-**Enable**: Enables the physical border functionality. This physically stops the rotation of the motors when the user tries to bend the exo-skeleton beyond the borders set by **Upper** and **Lower**. A second click will disable the physical border.
-**Alert Start**: Enables the visual alert for crossing the border. When enabled the screen will turn red, when the border is crossed, to inform the user that it is crossed. A second click will disable the alert.
+**Upper**: Stores the current rotation of the motors of the elbow joint of the hosts exo-skeleton as the upper boundary.  
+**Lower**: Stores the current rotation of the motors of the elbow joint of the hosts exo-skeleton as the lower boundary.  
+**Enable**: Enables the physical border functionality. This physically stops the rotation of the motors when the user tries to bend the exo-skeleton beyond the borders set by **Upper** and **Lower**. A second click will disable the physical border.  
+**Alert Start**: Enables the visual alert for crossing the border. When enabled the screen will turn red, when the border is crossed, to inform the user that it is crossed. A second click will disable the alert.  
 **Start Sequence**: Like with Mirror, this button is only used for logging, and sends a message to the exo-skeleton to navigate the logs.
 
 ## Record Sequence
