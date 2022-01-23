@@ -2,8 +2,8 @@ This is the repository for the Unity implementation of the Body Swap project cre
 
 The repository and readme for the Raspberry Pi implementation is located at https://github.com/MrDm1try/BodySwapRaspberry.
 
-Below is the presentation used in the defence of this project.
-![Presentation](https://youtu.be/mOQ8tUG1tAQ)
+Below is the presentation used in the defence of this project.  
+[![Presentation](https://img.youtube.com/vi/mOQ8tUG1tAQ/0.jpg)](https://youtu.be/mOQ8tUG1tAQ)
 
 # Setup
 This readme assumes that the user already has access to a fully built exo-skeleton, however, it is possible to do the setup and navigate the menus of Unity without any exoskeletons.
