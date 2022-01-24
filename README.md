@@ -144,6 +144,6 @@ The image above show the menu that appears when a user ends a recording. It has 
 **Save**: Saves the recording with the name put into the input field.  
 **Cancel**: Cancels the recording. Returns the user to the recording menu and discards the recording.
 
-Below is a video showcasing the recording functionality:
+Below is a video showcasing the recording functionality:  
 ![RecordShowcase](https://user-images.githubusercontent.com/12494893/150778067-c9988d79-7cc8-49f2-a4f3-79d8b5245124.mp4)
 
