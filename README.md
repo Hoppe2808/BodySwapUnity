@@ -62,7 +62,7 @@ In order to get a better grasp on how the solution is implemented, take a look a
    - **OnMotorValue**: Method that should be called when updating the _Message_ variable. If the local user is the host, then is just updates the message, but if it's the client, then it sends an RPC call.  
    - **RPC_Configure**: Method to enable a client to update the _Message_ variable. Check the documentation for Fusion linked above to learn more about why this is done.  
    - **IsMaster**: Method to check if the exoskeleton that is connected to the local machine is considered the master by the running program.
-   - 
+
 **Simulator**: Script that controls the simulator. It is attached to a GameObject in the scene which should be set to active in order to start the simulator.
 
 **ElbowPositioner**: Script that controls the virtual arms rotations, syncing it with the movements of a connected exoskeleton. _elbow_value_ and _wrist_value_ are being synced across the fusion network.
