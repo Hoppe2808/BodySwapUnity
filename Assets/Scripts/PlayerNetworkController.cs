@@ -25,13 +25,13 @@ public class PlayerNetworkController : NetworkBehaviour
     [Networked(OnChanged = nameof(StartedBorders))] public NetworkBool BorderExperiment { get; set; }
 
     private PlayerController playerController;
-    private ClientController client;
     private NetworkObject network;
     private bool borderCrossed;
 
     // Start is called before the first frame update
     void Start()
     {
+        //Ensure same format for floats across systems
         CultureInfo.DefaultThreadCurrentCulture = new CultureInfo("en-US");
         playerController = FindObjectOfType<PlayerController>();
         elbow = playerController.GetElbowPositioner();
@@ -39,7 +39,6 @@ public class PlayerNetworkController : NetworkBehaviour
         RecordController.OnResendMsg += OnMotorValue;
         HostUnchanged = true;
         network = GetComponent<NetworkObject>();
-        client = FindObjectOfType<ClientController>();
         //Only for testing
         Simulator.OnDoSimulation += OnMotorValue;
     }
