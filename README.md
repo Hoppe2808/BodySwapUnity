@@ -56,18 +56,18 @@ In order to get a better grasp on how the solution is implemented, take a look a
 
 ## Code
 **UdpHost**: Script in charge of sending and receiving messages to/from the exoskeleton. It uses the UDP protocol for all communication.  
-**PlayerNetworkController**: Script in charge of all the networking logic related to Fusion. It includes a bunch of variables that are synced across the Fusion network. Below is an overview of the most important variables and methods in the script.
-- **Message**: The most important variable in PlayerNetworkController. This contains the movement data that should be sent to the exoskeletons, meaning the degrees of the engines of the exoskeletons.
-- **OnMotorValue**: Method that should be called when updating the _Message_ variable. If the local user is the host, then is just updates the message, but if it's the client, then it sends an RPC call.
-- **RPC_Configure**: Method to enable a client to update the _Message_ variable. Check the documentation for Fusion linked above to learn more about why this is done.
-- **IsMaster**: Method to check if the exoskeleton that is connected to the local machine is considered the master by the running program.
-**Simulator**: Script that controls the simulator. It is attached to a GameObject in the scene which should be set to active in order to start the simulator.
-**ElbowPositioner**: Script that controls the virtual arms rotations, syncing it with the movements of a connected exoskeleton. _elbow_value_ and _wrist_value_ are being synced across the fusion network.
-**CameraController**: Moves the camera to an appropriate position corresponding to the virtual arm.
-**PlayerController**: Contains the ElbowPositioner. Can be extended to include logic that should not be networked, and thus should not be put in _PlayerNetworkController_.
-**RecordController**: Script that contains the logic for the record and replay sequence flow.
-**SpawnHost**: In charge of spawning the PlayerPrototype whenever a user is connected to the network.
-**UIController**: Handles the logic of all the UI elements described in the interface section.
+**PlayerNetworkController**: Script in charge of all the networking logic related to Fusion. It includes a bunch of variables that are synced across the Fusion network. Below is an overview of the most important variables and methods in the script.  
+   - **Message**: The most important variable in PlayerNetworkController. This contains the movement data that should be sent to the exoskeletons, meaning the degrees of the engines of the exoskeletons.  
+   - **OnMotorValue**: Method that should be called when updating the _Message_ variable. If the local user is the host, then is just updates the message, but if it's the client, then it sends an RPC call.  
+   - **RPC_Configure**: Method to enable a client to update the _Message_ variable. Check the documentation for Fusion linked above to learn more about why this is done.  
+   - **IsMaster**: Method to check if the exoskeleton that is connected to the local machine is considered the master by the running program.  
+**Simulator**: Script that controls the simulator. It is attached to a GameObject in the scene which should be set to active in order to start the simulator.  
+**ElbowPositioner**: Script that controls the virtual arms rotations, syncing it with the movements of a connected exoskeleton. _elbow_value_ and _wrist_value_ are being synced across the fusion network.  
+**CameraController**: Moves the camera to an appropriate position corresponding to the virtual arm.  
+**PlayerController**: Contains the ElbowPositioner. Can be extended to include logic that should not be networked, and thus should not be put in  _PlayerNetworkController_.  
+**RecordController**: Script that contains the logic for the record and replay sequence flow.  
+**SpawnHost**: In charge of spawning the PlayerPrototype whenever a user is connected to the network.  
+**UIController**: Handles the logic of all the UI elements described in the interface section.  
 **UpperArmPositioner**: Handles positioning the upper limb of the virtual arm, so it's attached to the player.  
 
 ## Interface
