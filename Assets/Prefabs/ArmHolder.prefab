@@ -140,7 +140,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2ce173ad8e3531419bd0a2541158847, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Table: {fileID: 0}
+  _interpolationDataSource: 0
+  _elbow_value: 0
+  _wrist_value: 0
 --- !u!1 &8148088802995751127
 GameObject:
   m_ObjectHideFlags: 0
@@ -153,8 +155,6 @@ GameObject:
   - component: {fileID: 8148088802995751122}
   - component: {fileID: 8148088802995751121}
   - component: {fileID: 8148088802995751126}
-  - component: {fileID: 1777403040100086312}
-  - component: {fileID: 8398372690171307578}
   m_Layer: 0
   m_Name: ArmPlane
   m_TagString: Untagged
@@ -173,7 +173,6 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.40992415, y: 0.004099245, z: 0.25710008}
   m_Children:
-  - {fileID: 8148088803026273671}
   - {fileID: 2347255031793763306}
   m_Father: {fileID: 8148088804811633861}
   m_RootOrder: 1
@@ -298,64 +297,6 @@ ConfigurableJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
---- !u!114 &1777403040100086312
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8148088802995751127}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e0b863c9433098e4593082bc601e6c2b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  udpHost: {fileID: 0}
-  congruent: 1
-  doesMovement: 1
---- !u!114 &8398372690171307578
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8148088802995751127}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 600a4531f7d812b40820c6d00b4a91ef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CollisionTracker: {fileID: 8148088803026273671}
---- !u!1 &8148088803026273668
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8148088803026273671}
-  m_Layer: 0
-  m_Name: CollisionTracker
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &8148088803026273671
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8148088803026273668}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 8148088802995751133}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8148088804811633882
 GameObject:
   m_ObjectHideFlags: 0
@@ -507,7 +448,7 @@ PrefabInstance:
     - target: {fileID: 6618390581483422108, guid: 36f9b97c2457d4c45b6e66071702540d,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6618390581483422108, guid: 36f9b97c2457d4c45b6e66071702540d,
         type: 3}

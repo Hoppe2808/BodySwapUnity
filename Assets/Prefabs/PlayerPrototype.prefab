@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 5380789471555330365}
   - component: {fileID: 5380789471555330306}
   - component: {fileID: 825904181429324442}
+  - component: {fileID: 7060067805971872032}
   m_Layer: 6
   m_Name: PlayerPrototype
   m_TagString: Untagged
@@ -68,7 +69,6 @@ MonoBehaviour:
   - {fileID: 8082561586398403896}
   - {fileID: 5380789471555330306}
   - {fileID: 825904181429324442}
-  - {fileID: 0}
   - {fileID: 2306527911166118770}
   SimulationBehaviours: []
 --- !u!136 &4130298582667342448
@@ -115,7 +115,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _interpolationDataSource: 0
   TransformLocal: 0
-  Speed: 6
+  Speed: 0
 --- !u!114 &2154725602478415219
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -123,7 +123,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3527511612801708644}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6c0a59abb07a62a4e99c95e71edca10b, type: 3}
   m_Name: 
@@ -143,7 +143,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 80
+  m_Constraints: 122
   m_CollisionDetection: 0
 --- !u!114 &5380789471555330365
 MonoBehaviour:
@@ -175,12 +175,19 @@ MonoBehaviour:
   _interpolationDataSource: 0
   udpHost: {fileID: 5380789471555330365}
   elbow: {fileID: 2306527911166118770}
-  _message: 
-  _hasHostUnchanged:
+  _Message: 00:00:00.0000,0.0,0.0
+  _HostUnchanged:
     _value: 0
-  _upperBorder: 0
-  _lowerBorder: 0
-  _bordersEnabled:
+  _UpperBorder: 0
+  _LowerBorder: 0
+  _BordersEnabled:
+    _value: 0
+  _AlertEnabled:
+    _value: 0
+  _MirrorMessage: 
+  _ReleaseControl:
+    _value: 0
+  _BorderExperiment:
     _value: 0
 --- !u!114 &825904181429324442
 MonoBehaviour:
@@ -211,6 +218,19 @@ MonoBehaviour:
     RotTeleportRadians: 1.5
   SyncScale: 0
   Space: 0
+--- !u!114 &7060067805971872032
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3527511612801708644}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16956e3774b9cd6c9bf182ec0032c839, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pnc: {fileID: 5380789471555330306}
 --- !u!1 &3590228051123933966
 GameObject:
   m_ObjectHideFlags: 0
@@ -775,7 +795,8 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1777403040100086312, guid: 8503d971edcce754684eaa940f0a0315, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 8503d971edcce754684eaa940f0a0315, type: 3}
 --- !u!4 &5370296557005315248 stripped
 Transform:

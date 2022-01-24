@@ -14,8 +14,39 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SimpleSelectedItems:
     m_Keys:
+    - Assets/CollisionLogger.cs
+    - Assets/CollisionLogger.cs.meta
+    - Assets/ExampleController.cs
+    - Assets/ExampleController.cs.meta
+    - Assets/ExampleEvents.cs
+    - Assets/ExampleEvents.cs.meta
+    - Assets/Prefabs/ArmHolder.prefab
+    - Assets/Prefabs/ClientController.prefab
+    - Assets/Prefabs/ClientController.prefab.meta
+    - Assets/Prefabs/PlayerPrototype.prefab
+    - Assets/Scenes/SampleScene.unity
+    - Assets/Scripts/ClientController.cs
+    - Assets/Scripts/ClientController.cs.meta
+    - Assets/Scripts/ForeArmPositioner.cs
+    - Assets/Scripts/ForeArmPositioner.cs.meta
+    - Assets/Scripts/ForeArmRotater.cs
+    - Assets/Scripts/ForeArmRotater.cs.meta
+    - Assets/Scripts/PlayerController.cs
+    - Assets/Scripts/PlayerNetworkController.cs
+    - Assets/Scripts/RecordController.cs
+    - Assets/Scripts/RecordController.cs.meta
+    - Assets/Scripts/Simulator.cs
+    - Assets/Scripts/Simulator.cs.meta
+    - Assets/Scripts/SpawnHost.cs
+    - Assets/Scripts/UIController.cs
+    - Assets/Udp/Examples.meta
+    - Assets/Udp/Examples/Scripts.meta
+    - Assets/Udp/Examples/Scripts/ExampleUI.cs
+    - Assets/Udp/Examples/Scripts/ExampleUI.cs.meta
+    - Assets/ValueStreamer.cs
+    - Assets/ValueStreamer.cs.meta
     - 
-    m_Values: 01
+    m_Values: 0000000000000000000000000000000000000000000000000000000000000000
   RevisionSummary: 
   ChangesSearchValue: 
   SelectedHistoryRevision: 
