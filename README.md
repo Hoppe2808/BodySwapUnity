@@ -72,6 +72,7 @@ In order to get a better grasp on how the solution is implemented, take a look a
 **PlayerController**: Contains the ElbowPositioner. Can be extended to include logic that should not be networked, and thus should not be put in  _PlayerNetworkController_.
 
 **RecordController**: Script that contains the logic for the record and replay sequence flow.
+   - **Save location**: The script uses the Unity function Application.persistentDataPath to save the files. This location varies depending on what operating system the program is running on. Refer to Unitys own documentation to find the path for your system: [Link](https://docs.unity3d.com/ScriptReference/Application-persistentDataPath.html). RecordController creates a folder in the path called "Recordings", which is where the recording files are saved as json files.
 
 **SpawnHost**: In charge of spawning the PlayerPrototype whenever a user is connected to the network.
 
